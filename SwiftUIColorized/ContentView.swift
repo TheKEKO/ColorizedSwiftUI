@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+            Slider(value: .constant(0.5))
+        }
+        .padding()
     }
 }
 
