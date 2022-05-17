@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var red: Double = 20
-    @State private var green: Double = 60
-    @State private var blue: Double = 86
+    @State private var red: Double = 85
+    @State private var green: Double = 128
+    @State private var blue: Double = 255
     
     var body: some View {
         ZStack {
