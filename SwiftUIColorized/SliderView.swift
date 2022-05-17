@@ -21,20 +21,19 @@ struct SliderView: View {
             
             Slider(value: $sliderValue, in: 0...255, step: 1)
                 .accentColor(textColor)
-            
+    
             TextField("", value: $sliderValue, formatter: NumberFormatter())
                 .textFieldStyle(.roundedBorder)
                 .multilineTextAlignment(.center)
                 .frame(width: 50, height: 32)
-                .foregroundColor(.black)
         }
-        .padding()
+        .padding(EdgeInsets(top: 5, leading: 16, bottom: 5, trailing: 16))
     }
 }
 
 struct SliderView_Previews: PreviewProvider {
     static var previews: some View {
-        SliderView(sliderValue: .constant(155), textColor: .red)
+        SliderView(sliderValue: .constant(150), textColor: .red)
     }
 }
 
