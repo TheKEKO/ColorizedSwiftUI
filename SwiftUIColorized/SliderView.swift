@@ -11,7 +11,7 @@ struct SliderView: View {
     
     @Binding var sliderValue: Double
     
-    var textColor: Color
+    let textColor: Color
     
     var body: some View {
         HStack(spacing: 20){
