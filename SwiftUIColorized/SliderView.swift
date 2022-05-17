@@ -1,20 +1,27 @@
+////
+////  SliderView.swift
+////  SwiftUIColorized
+////
+////  Created by Aleksandr F. on 17.05.2022.
+////
 //
-//  SliderView.swift
-//  SwiftUIColorized
+//import SwiftUI
 //
-//  Created by Aleksandr F. on 17.05.2022.
+//struct SliderView: View {
 //
-
-import SwiftUI
-
-struct SliderView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct SliderView_Previews: PreviewProvider {
-    static var previews: some View {
-        SliderView()
-    }
-}
+//    @Binding var sliderValue: Double
+//
+//    var body: some View {
+//        VStack{
+//            Slider(value: $sliderValue)
+//        }
+//        .padding()
+//    }
+//}
+//
+//struct SliderView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SliderView()
+//    }
+//}
+//
