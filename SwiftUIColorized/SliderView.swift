@@ -17,7 +17,7 @@ struct SliderView: View {
         HStack(spacing: 20){
             Text("\(lround(sliderValue))")
                 .foregroundColor(.white)
-                .frame(width: 32, height: 32)
+                .frame(width: 32)
             
             Slider(value: $sliderValue, in: 0...255, step: 1)
                 .accentColor(textColor)
@@ -26,6 +26,7 @@ struct SliderView: View {
                 .textFieldStyle(.roundedBorder)
                 .multilineTextAlignment(.center)
                 .frame(width: 50, height: 32)
+
         }
         .padding(EdgeInsets(top: 5, leading: 16, bottom: 5, trailing: 16))
     }
@@ -36,4 +37,6 @@ struct SliderView_Previews: PreviewProvider {
         SliderView(sliderValue: .constant(150), textColor: .red)
     }
 }
+
+
 
