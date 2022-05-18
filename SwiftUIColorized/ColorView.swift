@@ -14,18 +14,18 @@ struct ColorView: View {
     let blue: Double
     
     var body: some View {
-            Color(red: red / 255, green: green / 255, blue: blue / 255)
-            .frame(width: 350, height: 150)
-            .cornerRadius(10)
-            .overlay(RoundedRectangle(cornerRadius: 10)
-                .stroke(lineWidth: 4)
-                .foregroundColor(.white))
-            .padding(16)
+        Color(red: red / 255, green: green / 255, blue: blue / 255)
+            .frame(height: 130)
+            .cornerRadius(20)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color .white, lineWidth: 4)
+            )
     }
 }
 
 struct ColorView_Previews: PreviewProvider {
     static var previews: some View {
-        ColorView(red: 0.0, green: 0.0, blue: 0.0)
+        ColorView(red: 100, green: 100, blue: 100)
     }
 }
