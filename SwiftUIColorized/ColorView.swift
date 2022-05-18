@@ -18,7 +18,7 @@ struct ColorView: View {
             .frame(height: 130)
             .cornerRadius(20)
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: 20)
                     .stroke(Color .white, lineWidth: 4)
             )
     }
