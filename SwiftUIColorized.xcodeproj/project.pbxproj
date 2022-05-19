@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D412D4D32836819900D08B5E /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4D22836819900D08B5E /* TextFieldView.swift */; };
+		D412D4D5283681A700D08B5E /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D412D4D4283681A700D08B5E /* TextView.swift */; };
 		D4B002E728327DE400C97212 /* SwiftUIColorizedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B002E628327DE400C97212 /* SwiftUIColorizedApp.swift */; };
 		D4B002E928327DE400C97212 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B002E828327DE400C97212 /* ContentView.swift */; };
 		D4B002EB28327DE500C97212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B002EA28327DE500C97212 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D412D4D22836819900D08B5E /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		D412D4D4283681A700D08B5E /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		D4B002E328327DE400C97212 /* SwiftUIColorized.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIColorized.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B002E628327DE400C97212 /* SwiftUIColorizedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIColorizedApp.swift; sourceTree = "<group>"; };
 		D4B002E828327DE400C97212 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 				D4B002E628327DE400C97212 /* SwiftUIColorizedApp.swift */,
 				D4B002E828327DE400C97212 /* ContentView.swift */,
 				D4B4166028339DB3005AC193 /* SliderView.swift */,
+				D412D4D22836819900D08B5E /* TextFieldView.swift */,
+				D412D4D4283681A700D08B5E /* TextView.swift */,
 				D4B4166228339DC5005AC193 /* ColorView.swift */,
 				D4B002EA28327DE500C97212 /* Assets.xcassets */,
 				D4B002EC28327DE500C97212 /* Preview Content */,
@@ -144,7 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4B4166328339DC5005AC193 /* ColorView.swift in Sources */,
+				D412D4D32836819900D08B5E /* TextFieldView.swift in Sources */,
 				D4B4166128339DB3005AC193 /* SliderView.swift in Sources */,
+				D412D4D5283681A700D08B5E /* TextView.swift in Sources */,
 				D4B002E928327DE400C97212 /* ContentView.swift in Sources */,
 				D4B002E728327DE400C97212 /* SwiftUIColorizedApp.swift in Sources */,
 			);
