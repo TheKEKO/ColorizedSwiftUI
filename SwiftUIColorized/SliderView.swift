@@ -7,34 +7,37 @@
 
 import SwiftUI
 
-struct SliderView: View {
+struct ColorSliderView: View {
     
-    @Binding var sliderValue: Double
+    @Binding var value: Double
+    @State private var text = ""
     
-    let textColor: Color
+    let color: Color
     
     var body: some View {
-        HStack(spacing: 20){
-            Text("\(lround(sliderValue))")
-                .foregroundColor(.white)
-                .frame(width: 32)
+        HStack {
+            TextView(value: value)
             
-            Slider(value: $sliderValue, in: 0...255, step: 1)
-                .accentColor(textColor)
-    
-            TextField("", value: $sliderValue, formatter: NumberFormatter())
-                .textFieldStyle(.roundedBorder)
-                .multilineTextAlignment(.center)
-                .frame(width: 50, height: 32)
-
+            Slider(value: $value, in: 0...255, step: 1)
+                .tint(color)
+                .onChange(of: value) { newValue in
+                    text = "\(lround(newValue))"
+                }
+            
+            TextFieldView(text: $text, value: $value)
         }
-        .padding(EdgeInsets(top: 5, leading: 16, bottom: 5, trailing: 16))
+        .onAppear {
+            text = "\(lround(value))"
+        }
     }
 }
 
-struct SliderView_Previews: PreviewProvider {
+struct ColorSlider_Previews: PreviewProvider {
     static var previews: some View {
-        SliderView(sliderValue: .constant(150), textColor: .red)
+        ZStack {
+            Color.gray
+            ColorSliderView(value: .constant(100), color: .red)
+        }
     }
 }
 

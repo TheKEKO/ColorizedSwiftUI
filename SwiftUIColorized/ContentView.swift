@@ -8,24 +8,40 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var red = Double.random(in: 0...255)
+    @State private var green = Double.random(in: 0...255)
+    @State private var blue = Double.random(in: 0...255)
     
-    @State private var red: Double = 85
-    @State private var green: Double = 128
-    @State private var blue: Double = 255
+    @FocusState private var isInputActive: Bool
     
     var body: some View {
         ZStack {
-            Color(#colorLiteral(red: 0.17, green: 0.41, blue: 0.74, alpha: 1))
-                .ignoresSafeArea()
-            VStack {
+            Color(#colorLiteral(red: 0, green: 0.3765624762, blue: 0.7304599881, alpha: 1)).ignoresSafeArea()
+                .onTapGesture {
+                    isInputActive = false
+                }
+            
+            VStack(spacing: 40) {
                 ColorView(red: red, green: green, blue: blue)
                 
-                SliderView(sliderValue: $red, textColor: .red)
-                SliderView(sliderValue: $green, textColor: .green)
-                SliderView(sliderValue: $blue, textColor: .blue)
-                
+                VStack {
+                    ColorSliderView(value: $red, color: .red)
+                    ColorSliderView(value: $green, color: .green)
+                    ColorSliderView(value: $blue, color: .blue)
+                }
+                .frame(height: 150)
+                .focused($isInputActive)
+                .toolbar {
+                    ToolbarItemGroup(placement: .keyboard) {
+                        Spacer()
+                        Button("Done") {
+                            isInputActive = false
+                        }
+                    }
+                }
                 Spacer()
-            }.padding()
+            }
+            .padding()
         }
     }
 }
