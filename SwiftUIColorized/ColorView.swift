@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ColorView: View {
-    
     let red: Double
     let green: Double
     let blue: Double
